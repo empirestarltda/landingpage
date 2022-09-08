@@ -1,5 +1,5 @@
 import GlobalStyle from './styles/global'; //Importa os estilos globais da aplicação
-import { Header } from './components/Header';
+import { Header } from './components/Cabecalho';
 
 function App() {
   return (
