@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,7 +10,16 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route index element={<App page='home'/>} />
+      <Route path='/home' element={<App page='home'/>} />
+      <Route path='/quem_somos' element={<App page='quem_somos'/>} />
+      <Route path='/produtos' element={<App page='produtos'/>} />
+      <Route path='/servicos' element={<App page='servicos'/>} />
+      <Route path='/contato' element={<App page='contato'/>} />
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

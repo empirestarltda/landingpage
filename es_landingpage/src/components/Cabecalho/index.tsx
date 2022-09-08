@@ -1,10 +1,35 @@
 import logo from '../../assets/icons/logo.svg'
 import instagram_icon from '../../assets/icons/instagram_icon.svg'
 import { Container } from './styles'
+import { Link } from 'react-router-dom'
 
-export function Header(){
-    const options :Array<string> = [
-        'Página Principal', 'Quem somos', 'Produtos', 'Serviços', 'Contato'
+interface Topico{
+    rota: string,
+    etiqueta: string
+}
+
+export function Cabecalho(){
+    const options :Array<Topico> = [
+        {
+            rota: 'home',
+            etiqueta:'Página Principal'
+        }, 
+        {
+            rota:'quem_somos',
+            etiqueta:'Quem somos'
+        }, 
+        {
+            rota:'produtos',
+            etiqueta:'Produtos'
+        }, 
+        {
+            rota:'servicos',
+            etiqueta:'Serviços'
+        }, 
+        {
+            rota:'contato',
+            etiqueta:'Contato'
+        }
     ]
     return(
         <Container>
@@ -12,7 +37,7 @@ export function Header(){
                 <img src={logo} alt="" />
                 <h2>Empire Star Ltda.</h2>
             </div>
-            {options.map(option => <span>{option}</span>)}
+            {options.map(option => <Link to={`/${option.rota}`}>{option.etiqueta}</Link>)}
             <a id='instagramIcon' href="https://www.instagram.com/empirestarltda/">
                 <img  src={instagram_icon} alt="ícone do instagram" />
             </a>
