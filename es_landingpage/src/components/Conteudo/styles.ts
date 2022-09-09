@@ -34,4 +34,12 @@ export const Container = styled.section `
         }
         
     }
+    #contatos{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 `

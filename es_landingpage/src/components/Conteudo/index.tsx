@@ -1,8 +1,12 @@
-import { Produto } from "../Produto";
 import { Container } from "./styles";
+import { Produto } from "../Produto";
+import { Contato } from "../Contato";
 import exemplo_curriculo from '../../assets/icons/exemplo_curriculo.svg'
 import exemplo_site from '../../assets/icons/exemplo_site.svg'
 import analise_de_dados from '../../assets/icons/analise_de_dados.svg'
+import instagram from '../../assets/icons/instagram.svg'
+import email from '../../assets/icons/email.svg'
+import whatsapp from '../../assets/icons/whatsapp.svg'
 
 interface ConteudoProps{
     nome_da_pagina? : string
@@ -11,6 +15,7 @@ interface ConteudoProps{
 interface Canal{
     nome:string;
     conteudo:string
+    img:string
 }
 
 export function Conteudo({nome_da_pagina}:ConteudoProps){
@@ -18,14 +23,17 @@ export function Conteudo({nome_da_pagina}:ConteudoProps){
         {
             nome: "Email",
             conteudo: "contato@empirestarltda.com",
+            img: email
         },
         {
             nome: "Telefone/WhatsApp",
-            conteudo: "+55 (11) 99580-2314"
+            conteudo: "+55 (11) 99580-2314",
+            img: whatsapp
         },
         {
-            nome: "Instagram",
-            conteudo: "@empirestarltda"
+            nome: "Direct via Instagram",
+            conteudo: "@empirestarltda",
+            img: instagram
         }
     ]
     return(
@@ -68,13 +76,16 @@ export function Conteudo({nome_da_pagina}:ConteudoProps){
             :
             nome_da_pagina === 'contato'?
             <>
-                <h1>Contato</h1>
+                <h1>Como você prefere falar com a gente?</h1>
                 <div id="texto">
-                    <p>Aqui estão os nossos canais de contato</p>
-                    <ul>
-                       {canais.map((canal) => <li>{`${canal.nome}: ${canal.conteudo}`}</li>)} 
-                    </ul>
+                    <p>
+                        Sinta-se à vontade para conversar conosco pelo canal que te deixar mais confortável. Atenderemos a sua solicitação ou dúvida o mais rápido que pudermos para oferecermos a melhor experiência para você.
+                    </p>
                 </div>
+                <div id="contatos">
+                    {canais.map((canal) => <Contato nome={canal.nome} img={canal.img}>{canal.conteudo}</Contato>)} 
+                </div>
+                
             </>
             :
             <h1>404</h1>
