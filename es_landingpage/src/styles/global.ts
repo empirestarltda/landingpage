@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
         --color-white-primary: #FFFFFF;
         --color-white-secondary: #F4F4F5;
-        --color-grey-primary: #D1D1D1;
+        --color-grey-primary: #D4D4D8;
         --color-grey-secondary: #F5F5F5;
     }
     h1{

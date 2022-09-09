@@ -1,4 +1,7 @@
+import { Produto } from "../Produto";
 import { Container } from "./styles";
+import exemplo_curriculo from '../../assets/icons/exemplo_curriculo.svg'
+import exemplo_site from '../../assets/icons/exemplo_site.svg'
 
 interface ConteudoProps{
     nome_da_pagina? : string
@@ -31,7 +34,11 @@ export function Conteudo({nome_da_pagina}:ConteudoProps){
             </>
             :
             nome_da_pagina === 'produtos'?
-            <h1>Produtos</h1>
+            <>
+                <h1>Produtos</h1>
+                <Produto nome="Currículo On-line" img={exemplo_curriculo}>Um currículo on-line pode ser o seu diferencial para conquistar a vaga de emprego que você tanto almeja! Nele você pode exibir - além de todas as informações super úteis de um currículo padrão - um vasto portfólio de uma forma agradável e onde você estiver.</Produto>
+                <Produto nome="Site Estático" img={exemplo_site}>Esse é o produto ideal se o que você está procurando é um site onde você possa exibir tudo que o seu negócio - seja ele qual for - tem a oferecer. Um belo site estático pode mudar o jogo do seu empreendimento! Construir sua presença on-line é essencial para garantir que as informações cheguem rápida e corretamente aos seus clientes!</Produto>
+            </>
             :
             nome_da_pagina === 'servicos'?
             <h1>Serviços</h1>
