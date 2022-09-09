@@ -23,6 +23,10 @@ export function Conteudo({nome_da_pagina}:ConteudoProps){
                     <p>Sabe aquele empurrãozinho que falta para começar a se organizar financeiramente?Aquela horinha que faltou para atualizar o currículo no fim de semana? São tantos compromissos que se organizar parece uma missão impossível...</p>
                     <p>Foi para ajudar você que a Empire Star nasceu. Somos uma empresa feita para ajudar a tirar os seus planos do papel, com produtos e serviços voltados à organização de estudos, financeira e da vida profissional. Ajudamos tanto quem está começando agora quanto já tem experiência no mercado!</p>
                     <p>Navegue pelo nosso site e conheça tudo que podemos fazer por você. Será um prazer fazer parte da sua história de sucesso!</p>
+                    <blockquote>
+                        <q>Com organização e tempo, acha-se o segredo de fazer tudo e bem feito.</q>
+                        <label htmlFor="q">-Pitágoras, filósofo grego</label>
+                    </blockquote>
                 </div>
             </>
             :

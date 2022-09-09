@@ -19,4 +19,19 @@ export const Container = styled.section `
             text-indent: 2.5rem;
         }
     }
+    blockquote{
+        display: flex;
+        flex-direction: column;
+        background: #D4D4D8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        font-size: 2.5rem;
+        font-weight: 400;
+        padding: 1.25rem;
+        font-style: italic;
+        label{
+            text-align: end;
+        }
+        
+    }
 `
