@@ -37,7 +37,7 @@ export const Container = styled.div `
             @media (max-width: 500px) {
                 flex-direction: column;
                 width: fit-content;
-                min-width: 25rem;
+                min-width: 20rem;
             }
             }
             @media (max-width: 500px) {
