@@ -15,24 +15,33 @@ export const Container = styled.nav `
         align-items: center;
         margin-left: 1rem;
         font-weight: 400;
-        a{
-            height: 100%;
-            width: fit-content;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-left: 1rem;
-            font-weight: 400;
-            h2{
+        h2{
             padding-left: 0.5rem;
             white-space: nowrap;
-            }
-        
-            img{
-                height: 75%;
+        }
+    
+        img{
+            height: 75%;
+        }
+        @media (max-width: 500px){
+            a{
+                height: 100%;
+                width: fit-content;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 1rem;
+                font-weight: 400;
+                h2{
+                padding-left: 0.5rem;
+                white-space: nowrap;
+                }
+            
+                img{
+                    height: 75%;
+                }
             }
         }
-        
     }
     
     #instagramIcon{
@@ -76,6 +85,13 @@ export const Container = styled.nav `
         display: flex;
         flex-direction: column;
         background-color: var(--primary-color);
+        align-items: center;
+        a{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     
 `

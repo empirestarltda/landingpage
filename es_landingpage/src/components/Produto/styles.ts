@@ -29,11 +29,21 @@ export const Container = styled.div `
                 margin: auto;
             }
         }
-
+        @media (max-width: 500px) {
+            align-items: center;
+        }       
     }
     #texto{
         text-indent: 2rem;
         margin: auto 5rem auto auto;
+        @media (max-width: 500px) {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
     }
-    
+    @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 `

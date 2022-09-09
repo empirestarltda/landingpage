@@ -9,7 +9,7 @@ export const Container = styled.section `
     h1{
         font-size: 4.5rem;
         @media (max-width: 500px) {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin: 0.5rem;
             text-align: center;
         }
@@ -20,9 +20,14 @@ export const Container = styled.section `
         flex-direction: column;
         text-align: justify;
         text-indent: 50;
+        align-items: center;
         p{
             font-size: 1.75rem;
             text-indent: 2.5rem;
+            @media (max-width: 500px) {
+                
+                font-size: 1.2rem;
+            }
         }
     }
     blockquote{
@@ -37,6 +42,10 @@ export const Container = styled.section `
         font-style: italic;
         label{
             text-align: end;
+        }
+        @media (max-width: 500px) {
+            width: 100%;
+            font-size: 1.2rem;
         }
         
     }

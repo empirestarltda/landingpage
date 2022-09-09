@@ -55,7 +55,7 @@ export function Cabecalho({funcaoCabecalho, estadoCabecalho}:CabecalhoProps){
             <div id='menu_container'>
                 <div id='grupo_logo' >
                     <div id='menu_icon' onClick={()=>funcaoCabecalho()}><img  src={menu} alt="ícone de menu"/></div>
-                    <Link to='/home'>
+                    <Link to='/home' onClick={()=>estadoCabecalho === true? funcaoCabecalho():null}>
                         <img src={logo} alt="Logo da Empire Star" />
                         <h2>Empire Star Ltda.</h2>
                     </Link>
@@ -65,6 +65,9 @@ export function Cabecalho({funcaoCabecalho, estadoCabecalho}:CabecalhoProps){
                     {estadoCabecalho === true? 
                         <div id='barra_lateral'>
                             {options.map(option => <Link to={`/${option.rota}`} onClick={() => funcaoCabecalho()}>{option.etiqueta}</Link>)}
+                            <a id='instagramIcon' href="https://www.instagram.com/empirestarltda/">
+                                <img  src={instagram_icon} alt="ícone do instagram" />
+                            </a>
                         </div> 
                     : 
                         <>

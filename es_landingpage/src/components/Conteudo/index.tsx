@@ -42,8 +42,7 @@ export function Conteudo({nome_da_pagina}:ConteudoProps){
             <>
                 <h1>Bem vinde ao futuro!</h1>
                 <div id="texto">
-                    <p>Viemos para somar. Nossa equipe colocou muito carinho neste projeto para podermos tornar a sua vida mais fácil.</p>
-                    <p>Sinta-se à vontade para navegar! Nesta página você encontrará todas as novidades sobre a Empire Star e o mundo da tecnologia.</p>
+                    <p>Viemos para somar. Nossa equipe colocou muito carinho neste projeto para podermos tornar a sua vida mais fácil. Sinta-se à vontade para navegar!</p>
                 </div>
             </>
             :
