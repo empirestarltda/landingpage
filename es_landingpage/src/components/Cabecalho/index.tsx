@@ -9,6 +9,7 @@ interface Topico{
 }
 
 export function Cabecalho(){
+
     const options :Array<Topico> = [ 
         {
             rota:'quem_somos',
@@ -27,17 +28,28 @@ export function Cabecalho(){
             etiqueta:'Contato'
         }
     ]
+
+    var largura = window.screen.width
+
     return(
         <Container>
             <Link id='grupo_logo' to={`/home`}>
                 <img src={logo} alt="Logo da Empire Star" />
                 <h2>Empire Star Ltda.</h2>
             </Link>
-            {options.map(option => <Link to={`/${option.rota}`}>{option.etiqueta}</Link>)}
-            <a id='instagramIcon' href="https://www.instagram.com/empirestarltda/">
-                <img  src={instagram_icon} alt="ícone do instagram" />
-            </a>
-
+            {largura > 501? 
+            <>
+                {options.map(option => <Link to={`/${option.rota}`}>{option.etiqueta}</Link>)}
+                <a id='instagramIcon' href="https://www.instagram.com/empirestarltda/">
+                    <img  src={instagram_icon} alt="ícone do instagram" />
+                </a>
+            </> 
+            :
+            <>
+            
+            </>
+            }
+            
         </Container>
     )
 }

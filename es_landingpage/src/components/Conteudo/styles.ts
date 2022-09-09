@@ -7,6 +7,11 @@ export const Container = styled.section `
     align-items: center;
     h1{
         font-size: 4.5rem;
+        @media (max-width: 500px) {
+            font-size: 3rem;
+            margin: 0.5rem;
+            text-align: center;
+        }
     }
     #texto{
         display: flex;
@@ -41,5 +46,11 @@ export const Container = styled.section `
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        @media (max-width: 500px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+    }
+    
 `

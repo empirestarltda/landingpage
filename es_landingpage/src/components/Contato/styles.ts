@@ -17,6 +17,7 @@ export const Container = styled.div `
         }
         #fundo{
             display: flex;
+            flex-direction: row;
             width: 35rem;
             height: 10rem;
             background: #D4D4D8;
@@ -27,13 +28,32 @@ export const Container = styled.div `
                 max-width:90%;
                 max-height: 100%;
                 margin: auto;
+                @media (max-width: 500px){
+                    max-width:75%;
+                    max-height: 75%;
+                    
+                }
+                }
+            @media (max-width: 500px) {
+                flex-direction: column;
+                width: fit-content;
+                min-width: 25rem;
+            }
+            }
+            @media (max-width: 500px) {
+                width:fit-content;
+                font-size: 1.25rem;
             }
         }
-
-    }
     #texto{
         text-indent: 2rem;
         margin: auto 5rem auto auto;
+        @media (max-width: 500px) {
+            width: fit-content;
+            text-indent: 0;
+            text-align: center;
+            margin: auto;
+        }
     }
     
 `
