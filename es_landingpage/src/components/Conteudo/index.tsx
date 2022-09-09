@@ -2,12 +2,32 @@ import { Produto } from "../Produto";
 import { Container } from "./styles";
 import exemplo_curriculo from '../../assets/icons/exemplo_curriculo.svg'
 import exemplo_site from '../../assets/icons/exemplo_site.svg'
+import analise_de_dados from '../../assets/icons/analise_de_dados.svg'
 
 interface ConteudoProps{
     nome_da_pagina? : string
 }
 
+interface Canal{
+    nome:string;
+    conteudo:string
+}
+
 export function Conteudo({nome_da_pagina}:ConteudoProps){
+    const canais :Array<Canal> =[
+        {
+            nome: "Email",
+            conteudo: "contato@empirestarltda.com",
+        },
+        {
+            nome: "Telefone/WhatsApp",
+            conteudo: "+55 (11) 99580-2314"
+        },
+        {
+            nome: "Instagram",
+            conteudo: "@empirestarltda"
+        }
+    ]
     return(
         <Container>
             {nome_da_pagina === 'home' || nome_da_pagina === undefined ?
@@ -41,10 +61,21 @@ export function Conteudo({nome_da_pagina}:ConteudoProps){
             </>
             :
             nome_da_pagina === 'servicos'?
-            <h1>Serviços</h1>
+            <>
+                <h1>Serviços</h1>
+                <Produto nome="Análise de dados" img={analise_de_dados}>Nosso serviço de análise de dados é totalmente customizável às suas necessidades. Utilizamos métodos ágeis e tecnologias confiáveis para ter certeza que você recebera a análise que precisa para o seu negócio ou pesquisa. </Produto>
+            </>
             :
             nome_da_pagina === 'contato'?
-            <h1>Contato</h1>
+            <>
+                <h1>Contato</h1>
+                <div id="texto">
+                    <p>Aqui estão os nossos canais de contato</p>
+                    <ul>
+                       {canais.map((canal) => <li>{`${canal.nome}: ${canal.conteudo}`}</li>)} 
+                    </ul>
+                </div>
+            </>
             :
             <h1>404</h1>
             }

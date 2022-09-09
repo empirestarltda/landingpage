@@ -24,7 +24,8 @@ export const Container = styled.div `
             border-radius: 30px;
             margin-bottom: 1.5rem;
             img{
-                width:90%;
+                max-width:90%;
+                max-height: 100%;
                 margin: auto;
             }
         }

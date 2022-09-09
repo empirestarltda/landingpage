@@ -9,11 +9,7 @@ interface Topico{
 }
 
 export function Cabecalho(){
-    const options :Array<Topico> = [
-        {
-            rota: 'home',
-            etiqueta:'Página Principal'
-        }, 
+    const options :Array<Topico> = [ 
         {
             rota:'quem_somos',
             etiqueta:'Quem somos'
