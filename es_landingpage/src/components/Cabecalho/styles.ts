@@ -27,7 +27,7 @@ export const Container = styled.nav<CabecalhoProps> `
         img{
             height: 75%;
         }
-        @media (max-width: 500px){
+        @media (max-width: 820px){
             a{
                 height: 100%;
                 width: fit-content;
@@ -47,7 +47,12 @@ export const Container = styled.nav<CabecalhoProps> `
             }
         }
     }
-    
+    #logo{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
     #instagramIcon{
         margin-right: 1rem;
         img{
@@ -59,7 +64,7 @@ export const Container = styled.nav<CabecalhoProps> `
         text-decoration: none;
         font-weight: 500;
         font-size: 1.25rem;
-        @media (max-width: 500px){
+        @media (max-width: 820px){
             margin: auto;
         }
     }
@@ -75,6 +80,7 @@ export const Container = styled.nav<CabecalhoProps> `
         height: 4.5rem;
     }
     #menu_icon{
+        min-width: 3rem;
         width: fit-content;
         img{
             margin: auto;
@@ -94,7 +100,7 @@ export const Container = styled.nav<CabecalhoProps> `
         height: calc(100vh - 4.5rem);
         display: flex;
         flex-direction: column;
-        background-color: var(--primary-color);
+        background-color: ${props => props.tema === 'claro'? "var(--primary-color)" : "var(--secundary-color)"};
         align-items: center;
         a{
             width: 100%;
@@ -112,5 +118,13 @@ export const Container = styled.nav<CabecalhoProps> `
         top:2.5rem;
         right:15rem;
         white-space: nowrap;
+        @media (max-width: 820px) {
+            width: 100vw;
+            display: flex;
+            text-align: center;
+            top: 1.5rem;
+            right: 11.5rem;
+            font-size: 0.75rem;
+        }
     }
 `

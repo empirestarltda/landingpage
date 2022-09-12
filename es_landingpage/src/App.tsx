@@ -10,7 +10,7 @@ interface AppProps{
 
 function App({page}:AppProps) {
   const [estadoMenu, mudarEstadoMenu] = useState(false)
-  const [tema, mudarTema] = useState<'claro'|'escuro'>('escuro')
+  const [tema, mudarTema] = useState<'claro'|'escuro'>('claro')
   return (
       <main className='App'>
         <GlobalStyle tema={tema}/> {/* Inicializa os Estilos globais */}

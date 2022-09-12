@@ -12,6 +12,7 @@ export const Container = styled.div `
         flex-direction: column;
         text-align: center;
         font-size: 1.75rem;
+        
         span{
             margin-bottom: 0.5rem;
         }
@@ -28,22 +29,20 @@ export const Container = styled.div `
                 max-height: 100%;
                 margin: auto;
             }
-        }
-        @media (max-width: 500px) {
-            align-items: center;
-        }       
+        }     
     }
     #texto{
         text-indent: 2rem;
         margin: auto 5rem auto auto;
-        @media (max-width: 500px) {
+        @media (max-width: 820px) {
             font-size: 1.2rem;
-            margin-bottom: 1rem;
+            margin: 0 2rem 1rem 2rem;
         }
     }
-    @media (max-width: 500px){
+    @media (max-width: 820px){
         display: flex;
         flex-direction: column;
         width: 100%;
+        align-items: center;
     }
 `

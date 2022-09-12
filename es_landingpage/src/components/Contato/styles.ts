@@ -31,7 +31,7 @@ export const Container = styled.div `
                 max-width:90%;
                 max-height: 100%;
                 margin: auto;
-                @media (max-width: 500px){
+                @media (max-width: 820px){
                     max-width:75%;
                     max-height: 75%;
                     
@@ -40,13 +40,13 @@ export const Container = styled.div `
             @media (max-width: 1440px){
                 flex-direction: column;
             }
-            @media (max-width: 500px) {
+            @media (max-width: 820px) {
                 flex-direction: column;
                 width: fit-content;
                 min-width: 20rem;
             }
             }
-            @media (max-width: 500px) {
+            @media (max-width: 820px) {
                 width:fit-content;
                 font-size: 1.25rem;
             }
@@ -55,11 +55,12 @@ export const Container = styled.div `
         font-size: 1.5rem;
         text-indent: 2rem;
         margin: auto 5rem auto auto;
-        @media (max-width: 500px) {
+        @media (max-width: 820px) {
             width: fit-content;
             text-indent: 0;
             text-align: center;
             margin: auto;
+            font-size: 1.25rem;
         }
     }
     

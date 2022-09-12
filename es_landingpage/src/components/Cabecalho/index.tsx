@@ -3,6 +3,7 @@ import logo_alternativo from '../../assets/icons/logo_alternativo.svg'
 import instagram_icon from '../../assets/icons/instagram_icon.svg'
 import instagram_alternativo from '../../assets/icons/instagram_alternativo.svg'
 import menu from '../../assets/icons/menu.svg'
+import menu_alternativo from '../../assets/icons/menu_alternativo.svg'
 import { Container } from './styles'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -50,7 +51,7 @@ export function Cabecalho({funcaoCabecalho, estadoCabecalho, funcaoTema, tema}:C
     return(
         <Container tema={tema}>
             
-            {largura > 501? 
+            {largura > 821? 
             <>
                 <div id='grupo_logo' onClick={() => funcaoTema()} onMouseEnter={() => mudarVisibilidadeDica(!visibilidadeDica)} onMouseLeave={() => mudarVisibilidadeDica(!visibilidadeDica)}>
                     <img src={tema === 'claro'? logo : logo_alternativo} alt="Logo da Empire Star" />
@@ -65,19 +66,22 @@ export function Cabecalho({funcaoCabecalho, estadoCabecalho, funcaoTema, tema}:C
             :
             <div id='menu_container'>
                 <div id='grupo_logo' >
-                    <div id='menu_icon' onClick={()=>funcaoCabecalho()}><img  src={menu} alt="ícone de menu"/></div>
-                    <Link to='/home' onClick={()=>estadoCabecalho === true? funcaoCabecalho():null}>
-                        <img src={logo} alt="Logo da Empire Star" />
+                    <div id='menu_icon' onClick={()=>funcaoCabecalho()}><img  src={tema === 'claro' ? menu : menu_alternativo} alt="ícone de menu"/></div>
+                    <div id='logo' onClick={()=>funcaoTema()}>
+                        <img src={tema === 'claro'? logo : logo_alternativo} alt="Logo da Empire Star" />
                         <h2>Empire Star Ltda.</h2>
-                    </Link>
+                        <span id={estadoCabecalho === true ? 'visivel' : 'escondido'}>Clique para trocar o tema do site</span>
+                    </div>
                 </div>
                 <div id="menu">
                     
-                    {estadoCabecalho === true? 
+                    {estadoCabecalho === true?
+
                         <div id='barra_lateral'>
+                            
                             {options.map(option => <Link to={`/${option.rota}`} onClick={() => funcaoCabecalho()}>{option.etiqueta}</Link>)}
                             <a id='instagramIcon' href="https://www.instagram.com/empirestarltda/">
-                                <img  src={instagram_icon} alt="ícone do instagram" />
+                                <img  src={tema === 'claro'? instagram_icon: instagram_alternativo} alt="ícone do instagram" />
                             </a>
                         </div> 
                     : 
