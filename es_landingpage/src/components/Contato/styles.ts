@@ -9,6 +9,7 @@ export const Container = styled.div `
     text-align: justify;
     #exemplo{
         display: flex;
+        width: 95%;
         flex-direction: column;
         text-align: center;
         font-size: 1.75rem;
@@ -18,7 +19,7 @@ export const Container = styled.div `
         #fundo{
             display: flex;
             flex-direction: row;
-            width: 35rem;
+            width:100%;
             height: 10rem;
             background: #D4D4D8;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -34,6 +35,9 @@ export const Container = styled.div `
                     
                 }
                 }
+            @media (max-width: 1440px){
+                flex-direction: column;
+            }
             @media (max-width: 500px) {
                 flex-direction: column;
                 width: fit-content;
@@ -46,6 +50,7 @@ export const Container = styled.div `
             }
         }
     #texto{
+        font-size: 1.5rem;
         text-indent: 2rem;
         margin: auto 5rem auto auto;
         @media (max-width: 500px) {
