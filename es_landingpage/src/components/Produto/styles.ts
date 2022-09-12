@@ -7,6 +7,7 @@ export const Container = styled.div `
     font-size: 1.5rem;
     justify-content: space-around;
     text-align: justify;
+    margin-bottom: 2rem;
     #exemplo{
         display: flex;
         flex-direction: column;
@@ -33,7 +34,7 @@ export const Container = styled.div `
     }
     #texto{
         text-indent: 2rem;
-        margin: auto 5rem auto auto;
+        margin: auto 0 auto 5rem;
         @media (max-width: 820px) {
             font-size: 1.2rem;
             margin: 0 2rem 1rem 2rem;

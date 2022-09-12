@@ -3,6 +3,7 @@ import { Produto } from "../Produto";
 import { Contato } from "../Contato";
 import exemplo_curriculo from '../../assets/icons/exemplo_curriculo.svg'
 import exemplo_site from '../../assets/icons/exemplo_site.svg'
+import exemplo_planilhas from '../../assets/icons/exemplo_planilhas.svg'
 import instagram from '../../assets/icons/instagram.svg'
 import email from '../../assets/icons/email.svg'
 import whatsapp from '../../assets/icons/whatsapp.svg'
@@ -64,8 +65,18 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
             nome_da_pagina === 'produtos'?
             <>
                 <h1>Produtos</h1>
-                <Produto nome="Currículo On-line" img={exemplo_curriculo}>Um currículo on-line pode ser o seu diferencial para conquistar a vaga de emprego que você tanto almeja! Nele você pode exibir - além de todas as informações super úteis de um currículo padrão - um vasto portfólio de uma forma agradável e onde você estiver.</Produto>
-                <Produto nome="Site Estático" img={exemplo_site}>Esse é o produto ideal se o que você está procurando é um site onde você possa exibir tudo que o seu negócio - seja ele qual for - tem a oferecer. Um belo site estático pode mudar o jogo do seu empreendimento! Construir sua presença on-line é essencial para garantir que as informações cheguem rápida e corretamente aos seus clientes!</Produto>
+                <div id="texto_apresentacao">
+                    <p>Nossos produtos são 100% customizáveis e adaptados ao seu uso e às suas necessidades, seja você vestibulando, universitário, pequeno empresário, etc.</p>
+                    <p>Acreditamos que com uma ajudinha qualquer um pode se organizar e evoluir na sua vida pessoal, estudantil ou profissional</p>
+                </div>
+                <div id="grupo_produtos">
+                    <Produto nome="Currículo On-line" img={exemplo_curriculo}>Um currículo on-line pode ser o seu diferencial para conquistar a vaga de emprego que você tanto almeja! Nele você pode exibir - além de todas as informações super úteis de um currículo padrão - um vasto portfólio de uma forma agradável e onde você estiver.</Produto>
+                    <Produto nome="Site Estático" img={exemplo_site}>Esse é o produto ideal se o que você está procurando é um site onde você possa exibir tudo que o seu negócio - seja ele qual for - tem a oferecer. Um belo site estático pode mudar o jogo do seu empreendimento! Construir sua presença on-line é essencial para garantir que as informações cheguem rápida e corretamente aos seus clientes!</Produto>
+                    <Produto nome="Planilhas Personalizadas" img={exemplo_planilhas}>
+                            Precisa de ajuda para organizar as finanças, quer ter um acompanhamento dos seus acertos em questões estudando para um vestibular ou concurso ou precisa de outro tipo de planilha pro seu negócio? Não se preocupe! Temos a solução para você.
+                    </Produto>
+                </div>
+                
             </>
             :
             
