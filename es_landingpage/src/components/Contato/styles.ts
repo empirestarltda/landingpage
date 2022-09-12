@@ -7,6 +7,7 @@ export const Container = styled.div `
     font-size: 1.5rem;
     justify-content: space-around;
     text-align: justify;
+    
     #exemplo{
         display: flex;
         width: 95%;
@@ -25,6 +26,7 @@ export const Container = styled.div `
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 30px;
             margin-bottom: 1.5rem;
+            color: var(--secundary-color);
             img{
                 max-width:90%;
                 max-height: 100%;

@@ -1,5 +1,7 @@
 import logo from '../../assets/icons/logo.svg'
+import logo_alternativo from '../../assets/icons/logo_alternativo.svg'
 import instagram_icon from '../../assets/icons/instagram_icon.svg'
+import instagram_alternativo from '../../assets/icons/instagram_alternativo.svg'
 import menu from '../../assets/icons/menu.svg'
 import { Container } from './styles'
 import { Link } from 'react-router-dom'
@@ -11,10 +13,12 @@ interface Topico{
 
 interface CabecalhoProps{
     funcaoCabecalho: () => void,
+    funcaoTema: () => void,
     estadoCabecalho: boolean
+    tema: 'claro'|'escuro'
 }
 
-export function Cabecalho({funcaoCabecalho, estadoCabecalho}:CabecalhoProps){
+export function Cabecalho({funcaoCabecalho, estadoCabecalho, funcaoTema, tema}:CabecalhoProps){
 
     const options :Array<Topico> = [ 
         {
@@ -38,17 +42,17 @@ export function Cabecalho({funcaoCabecalho, estadoCabecalho}:CabecalhoProps){
     var largura = window.screen.width
 
     return(
-        <Container>
+        <Container tema={tema}>
             
             {largura > 501? 
             <>
                 <Link id='grupo_logo' to={`/home`}>
-                    <img src={logo} alt="Logo da Empire Star" />
+                    <img src={tema === 'claro'? logo : logo_alternativo} alt="Logo da Empire Star" />
                     <h2>Empire Star Ltda.</h2>
                 </Link>
                     {options.map(option => <Link to={`/${option.rota}`}>{option.etiqueta}</Link>)}
                 <a id='instagramIcon' href="https://www.instagram.com/empirestarltda/">
-                    <img  src={instagram_icon} alt="ícone do instagram" />
+                    <img  src={tema === 'claro'? instagram_icon: instagram_alternativo} alt="ícone do instagram" />
                 </a>
             </> 
             :

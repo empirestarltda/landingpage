@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 
-export const Container = styled.section `
+interface ConteudoProps{
+    tema: 'claro'|'escuro'
+}
+
+export const Container = styled.section<ConteudoProps> `
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     z-index: -1;
+    color: ${props => props.tema === 'claro'? "var(--secundary-color)" : "var(--primary-color)"};
     h1{
         font-size: 4.5rem;
         @media (max-width: 500px) {
@@ -40,6 +45,7 @@ export const Container = styled.section `
         font-weight: 400;
         padding: 1.25rem;
         font-style: italic;
+        color: var(--secundary-color);
         label{
             text-align: end;
         }

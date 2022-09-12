@@ -9,7 +9,9 @@ import email from '../../assets/icons/email.svg'
 import whatsapp from '../../assets/icons/whatsapp.svg'
 
 interface ConteudoProps{
+    tema: 'claro'|'escuro'
     nome_da_pagina? : string
+    
 }
 
 interface Canal{
@@ -18,7 +20,7 @@ interface Canal{
     img:string
 }
 
-export function Conteudo({nome_da_pagina}:ConteudoProps){
+export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
     const canais :Array<Canal> =[
         {
             nome: "Email",
@@ -37,7 +39,7 @@ export function Conteudo({nome_da_pagina}:ConteudoProps){
         }
     ]
     return(
-        <Container>
+        <Container tema={tema}>
             {nome_da_pagina === 'home' || nome_da_pagina === undefined ?
             <>
                 <h1>Bem vinde ao futuro!</h1>

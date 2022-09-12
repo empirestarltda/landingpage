@@ -1,12 +1,16 @@
 import styled from 'styled-components'
+interface CabecalhoProps{
+    tema: 'claro'|'escuro'
+}
 
-export const Container = styled.nav `
+export const Container = styled.nav<CabecalhoProps> `
     width: 100%;
     height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary-color);
+    background-color: ${props => props.tema === 'claro'? "var(--primary-color)" : "var(--secundary-color)"};
+    
     #grupo_logo{
         height: 100%;
         width: fit-content;
@@ -46,11 +50,14 @@ export const Container = styled.nav `
     
     #instagramIcon{
         margin-right: 1rem;
+        img{
+            width: 2rem;
+        }
     }
 
     a{
         text-decoration: none;
-        color: var(--secundary-color);
+        color: ${props => props.tema === 'claro'? "var(--secundary-color)" : "var(--primary-color)"};
         font-weight: 500;
         font-size: 1.25rem;
         @media (max-width: 500px){
