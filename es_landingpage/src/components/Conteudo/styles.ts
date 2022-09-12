@@ -8,8 +8,9 @@ export const Container = styled.section<ConteudoProps> `
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-height: 100vh;
+    height: fit-content;
     align-items: center;
-    z-index: -1;
     color: ${props => props.tema === 'claro'? "var(--secundary-color)" : "var(--primary-color)"};
     h1{
         font-size: 4.5rem;
@@ -50,6 +51,7 @@ export const Container = styled.section<ConteudoProps> `
         padding: 1.25rem;
         font-style: italic;
         color: var(--secundary-color);
+        
         label{
             text-align: end;
         }

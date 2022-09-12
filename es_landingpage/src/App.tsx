@@ -8,9 +8,39 @@ interface AppProps{
   page: string;
 }
 
+interface Topico{
+  rota: string,
+  etiqueta: string
+}
+
+
+export const options :Array<Topico> = [ 
+  {
+      rota: 'home',
+      etiqueta: 'Pagina Inicial'
+  },
+  {
+      rota:'quem_somos',
+      etiqueta:'Quem somos'
+  }, 
+  {
+      rota:'produtos',
+      etiqueta:'Produtos'
+  }, 
+  {
+      rota:'servicos',
+      etiqueta:'Serviços'
+  }, 
+  {
+      rota:'contato',
+      etiqueta:'Contato'
+  }
+]
+
 function App({page}:AppProps) {
   const [estadoMenu, mudarEstadoMenu] = useState(false)
   const [tema, mudarTema] = useState<'claro'|'escuro'>('claro')
+  
   return (
       <main className='App'>
         <GlobalStyle tema={tema}/> {/* Inicializa os Estilos globais */}

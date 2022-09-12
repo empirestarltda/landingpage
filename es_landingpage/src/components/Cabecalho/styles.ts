@@ -19,6 +19,7 @@ export const Container = styled.nav<CabecalhoProps> `
         align-items: center;
         margin-left: 1rem;
         font-weight: 400;
+        cursor: pointer;
         h2{
             padding-left: 0.5rem;
             white-space: nowrap;
@@ -71,6 +72,9 @@ export const Container = styled.nav<CabecalhoProps> `
 
     a, div{
         color: ${props => props.tema === 'claro'? "var(--secundary-color)" : "var(--primary-color)"};
+        &:hover{
+        color: ${props => props.tema === 'claro'? "var(--secundary-color-hover)" : "var(--primary-color-hover)"};
+    }
     }
 
     #menu_container{

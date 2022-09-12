@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   /* Firefox */
   * {
     scrollbar-width: auto;
-    scrollbar-color: ${props => props.tema === 'claro'? "var(--primary-color)" : "var(--secundary-color)"} transparent;
+    scrollbar-color: var(--secundary-color) transparent;
   }
 
   /* Chrome, Edge, and Safari */
@@ -46,9 +46,10 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: ${props => props.tema === 'claro'? "var(--primary-color)" : "var(--secundary-color)"};
+    background-color: var(--secundary-color);
     border-radius: 10px;
-    border: 1px solid ${props => props.tema === 'claro'? "var(--primary-color)" : "var(--secundary-color)"};
+    border: 1px solid var(--secundary-color);
   }
+
 `
 export default GlobalStyle

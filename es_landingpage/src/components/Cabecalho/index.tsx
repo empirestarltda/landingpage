@@ -7,11 +7,7 @@ import menu_alternativo from '../../assets/icons/menu_alternativo.svg'
 import { Container } from './styles'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-
-interface Topico{
-    rota: string,
-    etiqueta: string
-}
+import { options } from '../../App'
 
 interface CabecalhoProps{
     funcaoCabecalho: () => void,
@@ -20,30 +16,9 @@ interface CabecalhoProps{
     tema: 'claro'|'escuro'
 }
 
-export function Cabecalho({funcaoCabecalho, estadoCabecalho, funcaoTema, tema}:CabecalhoProps){
 
-    const options :Array<Topico> = [ 
-        {
-            rota: 'home',
-            etiqueta: 'Pagina Inicial'
-        },
-        {
-            rota:'quem_somos',
-            etiqueta:'Quem somos'
-        }, 
-        {
-            rota:'produtos',
-            etiqueta:'Produtos'
-        }, 
-        {
-            rota:'servicos',
-            etiqueta:'Serviços'
-        }, 
-        {
-            rota:'contato',
-            etiqueta:'Contato'
-        }
-    ]
+
+export function Cabecalho({funcaoCabecalho, estadoCabecalho, funcaoTema, tema}:CabecalhoProps){
 
     var largura = window.screen.width
     const [visibilidadeDica, mudarVisibilidadeDica] = useState(false)
@@ -51,14 +26,14 @@ export function Cabecalho({funcaoCabecalho, estadoCabecalho, funcaoTema, tema}:C
     return(
         <Container tema={tema}>
             
-            {largura > 821? 
+            {largura > 501? 
             <>
                 <div id='grupo_logo' onClick={() => funcaoTema()} onMouseEnter={() => mudarVisibilidadeDica(!visibilidadeDica)} onMouseLeave={() => mudarVisibilidadeDica(!visibilidadeDica)}>
                     <img src={tema === 'claro'? logo : logo_alternativo} alt="Logo da Empire Star" />
                     <h2>Empire Star Ltda.</h2>
                     <span id={visibilidadeDica === false ? 'escondido' : 'visivel'}>Clique para trocar o tema do site</span>
                 </div>
-                    {options.map(option => <Link to={`/${option.rota}`}>{option.etiqueta}</Link>)}
+                    {options.map((option, key) => <Link to={`/${option.rota}`} key={key.toString()}>{option.etiqueta}</Link>)}
                 <a id='instagramIcon' href="https://www.instagram.com/empirestarltda/">
                     <img  src={tema === 'claro'? instagram_icon: instagram_alternativo} alt="ícone do instagram" />
                 </a>
@@ -79,7 +54,7 @@ export function Cabecalho({funcaoCabecalho, estadoCabecalho, funcaoTema, tema}:C
 
                         <div id='barra_lateral'>
                             
-                            {options.map(option => <Link to={`/${option.rota}`} onClick={() => funcaoCabecalho()}>{option.etiqueta}</Link>)}
+                            {options.map((option, key) => <Link to={`/${option.rota}`} onClick={() => funcaoCabecalho()} key={key.toString()}>{option.etiqueta}</Link>)}
                             <a id='instagramIcon' href="https://www.instagram.com/empirestarltda/">
                                 <img  src={tema === 'claro'? instagram_icon: instagram_alternativo} alt="ícone do instagram" />
                             </a>
