@@ -51,7 +51,7 @@ function App({page}:AppProps) {
             tema={tema}
           />
           {estadoMenu === false? <Conteudo tema={tema} nome_da_pagina={page}/> : null}
-        <Rodape />
+        <Rodape estadoRodape={estadoMenu}/>
       </main>
   );
 }
