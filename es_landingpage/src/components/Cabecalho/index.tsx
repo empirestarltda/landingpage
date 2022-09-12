@@ -5,6 +5,7 @@ import instagram_alternativo from '../../assets/icons/instagram_alternativo.svg'
 import menu from '../../assets/icons/menu.svg'
 import { Container } from './styles'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 interface Topico{
     rota: string,
@@ -21,6 +22,10 @@ interface CabecalhoProps{
 export function Cabecalho({funcaoCabecalho, estadoCabecalho, funcaoTema, tema}:CabecalhoProps){
 
     const options :Array<Topico> = [ 
+        {
+            rota: 'home',
+            etiqueta: 'Pagina Inicial'
+        },
         {
             rota:'quem_somos',
             etiqueta:'Quem somos'
@@ -40,16 +45,18 @@ export function Cabecalho({funcaoCabecalho, estadoCabecalho, funcaoTema, tema}:C
     ]
 
     var largura = window.screen.width
+    const [visibilidadeDica, mudarVisibilidadeDica] = useState(false)
 
     return(
         <Container tema={tema}>
             
             {largura > 501? 
             <>
-                <Link id='grupo_logo' to={`/home`}>
+                <div id='grupo_logo' onClick={() => funcaoTema()} onMouseEnter={() => mudarVisibilidadeDica(!visibilidadeDica)} onMouseLeave={() => mudarVisibilidadeDica(!visibilidadeDica)}>
                     <img src={tema === 'claro'? logo : logo_alternativo} alt="Logo da Empire Star" />
                     <h2>Empire Star Ltda.</h2>
-                </Link>
+                    <span id={visibilidadeDica === false ? 'escondido' : 'visivel'}>Clique para trocar o tema do site</span>
+                </div>
                     {options.map(option => <Link to={`/${option.rota}`}>{option.etiqueta}</Link>)}
                 <a id='instagramIcon' href="https://www.instagram.com/empirestarltda/">
                     <img  src={tema === 'claro'? instagram_icon: instagram_alternativo} alt="ícone do instagram" />

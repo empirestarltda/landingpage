@@ -13,7 +13,7 @@ export const Container = styled.nav<CabecalhoProps> `
     
     #grupo_logo{
         height: 100%;
-        width: fit-content;
+        width: 18rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -57,12 +57,15 @@ export const Container = styled.nav<CabecalhoProps> `
 
     a{
         text-decoration: none;
-        color: ${props => props.tema === 'claro'? "var(--secundary-color)" : "var(--primary-color)"};
         font-weight: 500;
         font-size: 1.25rem;
         @media (max-width: 500px){
             margin: auto;
         }
+    }
+
+    a, div{
+        color: ${props => props.tema === 'claro'? "var(--secundary-color)" : "var(--primary-color)"};
     }
 
     #menu_container{
@@ -100,5 +103,14 @@ export const Container = styled.nav<CabecalhoProps> `
             align-items: center;
         }
     }
-    
+    #escondido{
+        display: none;
+    }
+    #visivel{
+        display: flex;
+        position: relative;
+        top:2.5rem;
+        right:15rem;
+        white-space: nowrap;
+    }
 `
