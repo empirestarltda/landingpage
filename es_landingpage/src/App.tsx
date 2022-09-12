@@ -26,11 +26,7 @@ export const options :Array<Topico> = [
   {
       rota:'produtos',
       etiqueta:'Produtos'
-  }, 
-  {
-      rota:'servicos',
-      etiqueta:'Serviços'
-  }, 
+  },  
   {
       rota:'contato',
       etiqueta:'Contato'

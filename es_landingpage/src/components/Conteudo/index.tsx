@@ -3,7 +3,6 @@ import { Produto } from "../Produto";
 import { Contato } from "../Contato";
 import exemplo_curriculo from '../../assets/icons/exemplo_curriculo.svg'
 import exemplo_site from '../../assets/icons/exemplo_site.svg'
-import analise_de_dados from '../../assets/icons/analise_de_dados.svg'
 import instagram from '../../assets/icons/instagram.svg'
 import email from '../../assets/icons/email.svg'
 import whatsapp from '../../assets/icons/whatsapp.svg'
@@ -69,12 +68,7 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
                 <Produto nome="Site Estático" img={exemplo_site}>Esse é o produto ideal se o que você está procurando é um site onde você possa exibir tudo que o seu negócio - seja ele qual for - tem a oferecer. Um belo site estático pode mudar o jogo do seu empreendimento! Construir sua presença on-line é essencial para garantir que as informações cheguem rápida e corretamente aos seus clientes!</Produto>
             </>
             :
-            nome_da_pagina === 'servicos'?
-            <>
-                <h1>Serviços</h1>
-                <Produto nome="Análise de dados" img={analise_de_dados}>Nosso serviço de análise de dados é totalmente customizável às suas necessidades. Utilizamos métodos ágeis e tecnologias confiáveis para ter certeza que você recebera a análise que precisa para o seu negócio ou pesquisa. </Produto>
-            </>
-            :
+            
             nome_da_pagina === 'contato'?
             <>
                 <h1>Como você prefere falar com a gente?</h1>

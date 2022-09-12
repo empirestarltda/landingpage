@@ -16,7 +16,6 @@ root.render(
       <Route path='/home' element={<App page='home'/>} />
       <Route path='/quem_somos' element={<App page='quem_somos'/>} />
       <Route path='/produtos' element={<App page='produtos'/>} />
-      <Route path='/servicos' element={<App page='servicos'/>} />
       <Route path='/contato' element={<App page='contato'/>} />
     </Routes>
     </BrowserRouter>
