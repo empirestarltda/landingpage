@@ -11,6 +11,9 @@ export const Container = styled.footer `
     img{
         padding: 1rem;
         max-width: 7.5%;
+        @media (max-width: 500px) {
+            max-width: 35%;
+        }
     }
     #navegue{
         width:25%;
