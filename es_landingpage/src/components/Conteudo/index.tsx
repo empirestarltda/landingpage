@@ -1,12 +1,25 @@
 import { Container } from "./styles";
 import { Produto } from "../Produto";
 import { Contato } from "../Contato";
+import { Mural } from "../Mural";
+
 import exemplo_curriculo from '../../assets/icons/exemplo_curriculo.svg'
 import exemplo_site from '../../assets/icons/exemplo_site.svg'
 import exemplo_planilhas from '../../assets/icons/exemplo_planilhas.svg'
 import instagram from '../../assets/icons/instagram.svg'
 import email from '../../assets/icons/email.svg'
 import whatsapp from '../../assets/icons/whatsapp.svg'
+
+import curriculo_matheus from '../../assets/img/curriculo_matheus.png'
+import curriculo_matheus_celular from '../../assets/img/curriculo_matheus_celular.png'
+import portifolio_matheus from '../../assets/img/portifolio_matheus.png'
+import es_claro from '../../assets/img/es_claro.png'
+import es_escuro from '../../assets/img/es_escuro.png'
+import pi_atelie from '../../assets/img/pi_atelie.png'
+import pi_atelie_celular from '../../assets/img/pi_atelie_celular.png'
+import o_atelie from '../../assets/img/o_atelie.png'
+import menu_atelie_celular from '../../assets/img/menu_atelie_celular.png'
+
 
 interface ConteudoProps{
     tema: 'claro'|'escuro'
@@ -21,6 +34,12 @@ interface Canal{
 }
 
 export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
+
+    const temaArray :Array<string> = [es_claro, es_escuro]
+    const responsividadeArray :Array<string> = [curriculo_matheus, curriculo_matheus_celular, pi_atelie, pi_atelie_celular, menu_atelie_celular]
+    const designArray :Array<string> = [o_atelie, portifolio_matheus]
+
+
     const canais :Array<Canal> =[
         {
             nome: "Email",
@@ -46,6 +65,13 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
                 <div id="texto">
                     <p>Viemos para somar. Nossa equipe colocou muito carinho neste projeto para podermos tornar a sua vida mais fácil. Sinta-se à vontade para navegar!</p>
                 </div>
+                <h2>Nosso Portifolio</h2>
+                <h3>Diversidade de temas</h3>
+                <Mural imgArray={temaArray} lado='esq'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Mural>
+                <h3>Design moderno</h3>
+                <Mural imgArray={designArray} lado='dir'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Mural>
+                <h3>Responsividade acima de tudo</h3>
+                <Mural imgArray={responsividadeArray} lado='esq'>Nossos sites são facilmente adaptáveis a qualquer tela, garantindo a melhor experiência para os seus visitantes e usuários</Mural>
             </>
             :
             nome_da_pagina === 'quem_somos'?

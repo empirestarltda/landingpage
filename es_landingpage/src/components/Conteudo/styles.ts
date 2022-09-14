@@ -21,6 +21,14 @@ export const Container = styled.section<ConteudoProps> `
             text-align: center;
         }
     }
+    h2{
+        font-size: 3.0rem;
+        margin: 0;
+        padding: 0;
+    }
+    h3{
+        font-size: 2.0rem;
+    }
     #texto{
         display: flex;
         width: 60%;
