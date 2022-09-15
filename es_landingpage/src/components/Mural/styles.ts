@@ -21,6 +21,7 @@ export const Container = styled.div<MuralProps> `
         width: fit-content;
         justify-content: center;
         border-radius: 30px;
+        color: var(--secundary-color);
         cursor: pointer;
         &:hover{
             background-color: rgba(0, 0, 0, 0.2);
@@ -28,10 +29,14 @@ export const Container = styled.div<MuralProps> `
     }
     #exemplo{
         display: flex;
+        min-height: 100%;
         flex-direction: column;
         text-align: center;
         font-size: 1.75rem;
-        
+        align-self: self-end;
+        @media (max-width: 820px) {
+            align-self: unset;
+            }
         span{
             margin-bottom: 0.5rem;
         }
@@ -65,11 +70,15 @@ export const Container = styled.div<MuralProps> `
         @media (max-width: 820px) {
             font-size: 1.2rem;
             margin: 0 2rem 1rem 2rem;
+            h3{
+                text-indent: 0;
+                text-align: center;
+            }
         }
     }
     @media (max-width: 820px){
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 100%;
         align-items: center;
     }

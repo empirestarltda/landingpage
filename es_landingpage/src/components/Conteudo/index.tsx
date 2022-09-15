@@ -65,13 +65,15 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
                 <div id="texto">
                     <p>Viemos para somar. Nossa equipe colocou muito carinho neste projeto para podermos tornar a sua vida mais fácil. Sinta-se à vontade para navegar!</p>
                 </div>
-                <h2>Nosso Portifolio</h2>
-                <h3>Diversidade de temas</h3>
-                <Mural imgArray={temaArray} lado='esq'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Mural>
-                <h3>Design moderno</h3>
-                <Mural imgArray={designArray} lado='dir'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Mural>
-                <h3>Responsividade acima de tudo</h3>
-                <Mural imgArray={responsividadeArray} lado='esq'>Nossos sites são facilmente adaptáveis a qualquer tela, garantindo a melhor experiência para os seus visitantes e usuários</Mural>
+                <h1>Nosso Portifolio</h1>
+                <div id="grupoMural">
+                    <Mural titulo="Diversidade de temas" imgArray={temaArray} lado='esq'>Você prefere tema escuro ou tema claro? Aqui na Empire Star você pode ter os dois! Trabalhamos com temas que garantem uma alta legibilidade e leiturabilidade, então pode ficar relaxar! Seu conteúdo será muito bem entregue aos seu visitantes! :)</Mural>
+
+                    <Mural titulo="Design moderno"imgArray={designArray} lado='dir'>Presamos por trabalhar com o que há de mais novo no mercado. Utilizamos das mais atuais tecnologias para que o seu site - além de ficar a sua cara e a cara da sua marca - mostre toda a jovialidade e atualidade da sua marca garantindo uma melhor comunicação e maturidade da sua presença digital.</Mural>
+
+                    <Mural titulo="Responsividade acima de tudo"imgArray={responsividadeArray} lado='esq'>Nossos sites são facilmente adaptáveis a qualquer tela, garantindo a melhor experiência para os seus visitantes e usuários. Seja desktop, tablet ou smartphone, a interface estará preparada para mostrar sempre o melhor que o seu negócio pode oferecer!</Mural>
+                </div>
+                
             </>
             :
             nome_da_pagina === 'quem_somos'?

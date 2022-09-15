@@ -21,13 +21,11 @@ export const Container = styled.section<ConteudoProps> `
             text-align: center;
         }
     }
-    h2{
-        font-size: 3.0rem;
-        margin: 0;
-        padding: 0;
-    }
     h3{
         font-size: 2.0rem;
+        @media (max-width: 820px) {
+            font-size: 1.5rem;
+        }
     }
     #texto{
         display: flex;
@@ -108,10 +106,19 @@ export const Container = styled.section<ConteudoProps> `
         justify-content: center;
         align-items: center;
         @media (max-width: 820px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    #grupoMural{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 5rem;
+        @media (max-width: 820px){
+            margin-top: 1.5rem;
+        }
     }
-    }
-    
 `
