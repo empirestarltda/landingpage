@@ -39,6 +39,8 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
     const responsividadeArray :Array<string> = [curriculo_matheus, curriculo_matheus_celular, pi_atelie, pi_atelie_celular, menu_atelie_celular]
     const designArray :Array<string> = [o_atelie, portifolio_matheus]
 
+    const atelieArray = [o_atelie, pi_atelie, pi_atelie_celular, menu_atelie_celular]
+    const matheusArray = [curriculo_matheus, curriculo_matheus_celular, portifolio_matheus]
 
     const canais :Array<Canal> =[
         {
@@ -67,11 +69,22 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
                 </div>
                 <h1>Nosso Portifolio</h1>
                 <div id="grupoMural">
-                    <Mural titulo="Diversidade de temas" imgArray={temaArray} lado='esq'>Você prefere tema escuro ou tema claro? Aqui na Empire Star você pode ter os dois! Trabalhamos com temas que garantem uma alta legibilidade e leiturabilidade, então pode ficar relaxar! Seu conteúdo será muito bem entregue aos seu visitantes! :)</Mural>
+                    <Mural titulo="Diversidade de temas" imgArray={temaArray} lado='esq'>
+                        Você prefere tema escuro ou tema claro? Aqui na Empire Star você pode ter os dois! Trabalhamos com temas que garantem uma alta legibilidade e leiturabilidade, então pode ficar relaxar! Seu conteúdo será muito bem entregue aos seu visitantes! :)
+                        </Mural>
 
-                    <Mural titulo="Design moderno"imgArray={designArray} lado='dir'>Presamos por trabalhar com o que há de mais novo no mercado. Utilizamos das mais atuais tecnologias para que o seu site - além de ficar a sua cara e a cara da sua marca - mostre toda a jovialidade e atualidade da sua marca garantindo uma melhor comunicação e maturidade da sua presença digital.</Mural>
+                    <Mural titulo="Design moderno"imgArray={designArray} lado='dir' 
+                    href={ designArray.map(i => matheusArray.includes(i) ? 'https://matheusalefe.github.io' 
+                    : atelieArray.includes(i)?'http://oateliegirassol.github.io'
+                    : undefined)}>
+                        Presamos por trabalhar com o que há de mais novo no mercado. Utilizamos das mais atuais tecnologias para que o seu site - além de ficar a sua cara e a cara da sua marca - mostre toda a jovialidade e atualidade da sua marca garantindo uma melhor comunicação e maturidade da sua presença digital.
+                    </Mural>
 
-                    <Mural titulo="Responsividade acima de tudo"imgArray={responsividadeArray} lado='esq'>Nossos sites são facilmente adaptáveis a qualquer tela, garantindo a melhor experiência para os seus visitantes e usuários. Seja desktop, tablet ou smartphone, a interface estará preparada para mostrar sempre o melhor que o seu negócio pode oferecer!</Mural>
+                    <Mural titulo="Responsividade acima de tudo"imgArray={responsividadeArray} lado='esq' href={ designArray.map(i => matheusArray.includes(i) ? 'https://matheusalefe.github.io' 
+                    : atelieArray.includes(i)?'http://oateliegirassol.github.io'
+                    : undefined)}>
+                        Nossos sites são facilmente adaptáveis a qualquer tela, garantindo a melhor experiência para os seus visitantes e usuários. Seja desktop, tablet ou smartphone, a interface estará preparada para mostrar sempre o melhor que o seu negócio pode oferecer!
+                    </Mural>
                 </div>
                 
             </>

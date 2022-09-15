@@ -14,9 +14,14 @@ export function Rodape({ estadoRodape }:RodapeProps){
             
             <>
                 <img src={logo_rodape} alt="logo empire star"/>
-                <div id='navegue'>
+                <div className='coluna'>
                     <span>Navegue</span>
                     {options.map((opt, key) => <Link to={`/${opt.rota}`} key={key.toString()}>{opt.etiqueta}</Link>)}
+                </div>
+                <div className="coluna">
+                    <span>Conheça também</span>
+                    <a href="https://matheusalefe.github.io">matheusalefe.github.io</a>
+                    <a href="https://oateliegirassol.github.io">oateliegirassol.github.io</a>
                 </div>
             </>
             :

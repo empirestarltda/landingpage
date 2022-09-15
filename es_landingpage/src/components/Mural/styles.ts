@@ -53,10 +53,23 @@ export const Container = styled.div<MuralProps> `
                 width: 20rem;
                 height: 9.6rem;
             }
+            a{
+                width: 100%;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                img{
+                max-width:98%;
+                @media (max-width: 820px) {
+                    max-width:95%;
+                }
+            }
+            }
             img{
                 max-width:90%;
                 max-height: 100%;
                 margin: auto;
+                border-radius: 4px;
                 @media (max-width: 820px) {
                     max-width:85%;
                     max-height: 100%;
