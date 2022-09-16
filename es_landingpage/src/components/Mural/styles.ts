@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 interface MuralProps{
     lado: 'esq'|'dir'
+    width: number|undefined
+    height: number|undefined
 }
 
 export const Container = styled.div<MuralProps> `
@@ -42,9 +44,9 @@ export const Container = styled.div<MuralProps> `
         }
         #fundo{
             display: flex;
-            width: fit-content;
+            min-width: 20rem;
+            min-height: 12.5rem;
             max-width: 25rem;
-            height: 12rem;
             background: #D4D4D8;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 30px;
@@ -61,13 +63,15 @@ export const Container = styled.div<MuralProps> `
                 margin: 0;
                 padding: 0;
                 img{
-                max-width:98%;
-                max-height: 11.5rem;
-                @media (max-width: 820px) {
-                    max-width:95%;
-                    max-height: 19.5rem;
+                    max-width:98%;
+                    max-height: 11.5rem;
+                    height: auto;
+                    width: auto;
+                    @media (max-width: 820px) {
+                        max-width:95%;
+                        max-height: 19.5rem;
+                    }
                 }
-            }
             }
             img{
                 max-width:90%;
@@ -81,7 +85,7 @@ export const Container = styled.div<MuralProps> `
             }
         }     
     }
-    #texto{
+    .texto{
         text-indent: 2rem;
         margin: ${props => props.lado === 'esq'? "0 0 auto 5rem" : "0 5rem auto 0"};
         @media (max-width: 820px) {
