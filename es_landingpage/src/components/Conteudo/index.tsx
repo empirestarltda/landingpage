@@ -149,7 +149,7 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
                     </p>
                 </div>
                 <div id="contatos">
-                    {canais.map((canal) => <Contato nome={canal.nome} img={canal.img}>{canal.conteudo}</Contato>)} 
+                    {canais.map((canal) => <Contato nome={canal.nome} img={canal.img} href={canal.nome === 'Telefone/WhatsApp'? 'https://api.whatsapp.com/send?phone=5511995802314' : undefined }>{canal.conteudo}</Contato>)} 
                 </div>
                 
             </>

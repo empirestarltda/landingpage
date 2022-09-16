@@ -27,14 +27,25 @@ export const Container = styled.div `
             border-radius: 30px;
             margin-bottom: 1.5rem;
             color: var(--secundary-color);
+            a{
+                display: flex;
+                width: fit-content;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                @media (max-width: 820px){
+                    width: 100%;
+                }
+            }
             img{
                 max-width:90%;
                 max-height: 100%;
+                padding-left: 0.5rem;
                 margin: auto;
                 @media (max-width: 820px){
                     max-width:75%;
                     max-height: 75%;
-                    
+                    padding-left: 0;
                 }
                 }
             @media (max-width: 1440px){
