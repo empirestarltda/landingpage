@@ -42,7 +42,8 @@ export const Container = styled.div<MuralProps> `
         }
         #fundo{
             display: flex;
-            width: 25rem;
+            width: fit-content;
+            max-width: 25rem;
             height: 12rem;
             background: #D4D4D8;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -50,8 +51,9 @@ export const Container = styled.div<MuralProps> `
             margin-bottom: 1.5rem;
             align-items: center;
             @media (max-width: 820px) {
-                width: 20rem;
-                height: 9.6rem;
+                max-width: 20rem;
+                height: fit-content;
+                max-height: 20rem;
             }
             a{
                 width: 100%;
@@ -60,8 +62,10 @@ export const Container = styled.div<MuralProps> `
                 padding: 0;
                 img{
                 max-width:98%;
+                max-height: 11.5rem;
                 @media (max-width: 820px) {
                     max-width:95%;
+                    max-height: 19.5rem;
                 }
             }
             }

@@ -64,7 +64,7 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
             {nome_da_pagina === 'home' || nome_da_pagina === undefined ?
             <>
                 <h1>Bem vinde ao futuro!</h1>
-                <div id="texto">
+                <div className="texto">
                     <p>Viemos para somar. Nossa equipe colocou muito carinho neste projeto para podermos tornar a sua vida mais fácil. Sinta-se à vontade para navegar!</p>
                 </div>
                 <h1>Nosso Portifolio</h1>
@@ -92,7 +92,7 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
             nome_da_pagina === 'quem_somos'?
             <>
                 <h1>Quanto vale o seu tempo?</h1>
-                <div id="texto">
+                <div className="texto">
                     <p>Sabe aquele empurrãozinho que falta para começar a se organizar financeiramente? Aquela horinha que faltou para atualizar o currículo no fim de semana? São tantos compromissos que se organizar parece uma missão impossível...</p>
                     <p>Foi para ajudar você que a Empire Star nasceu. Somos uma empresa feita para ajudar a tirar os seus planos do papel, com produtos e serviços voltados à organização de estudos, financeira e da vida profissional. Ajudamos tanto quem está começando agora quanto já tem experiência no mercado!</p>
                     <p>Navegue pelo nosso site e conheça tudo que podemos fazer por você. Será um prazer fazer parte da sua história de sucesso!</p>
@@ -100,6 +100,25 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
                         <q>Com organização e tempo, acha-se o segredo de fazer tudo e bem feito.</q>
                         <label htmlFor="q">-Pitágoras, filósofo grego</label>
                     </blockquote>
+                </div>
+                <h1>Visão</h1>
+                <div className="texto">
+                    <p>Ser competitiva no mercado entregando produtos e serviços de alto valor agregado à preços acessíveis aos seus clientes para democratizar o acesso à bens digitais de alta qualidade sem elitização agindo com transparência.</p>
+                </div>
+
+                <h1>Missões</h1>
+                <div className="texto">
+                    <p>1. Democratizar o acesso aos sites empresariais promovendo de forma ágil, moderna e acessível a elaboração dos mesmos aos micros e pequenos empreendedores brasileiros.</p>
+                    <p>2. Promover ajuda a estudantes e empreendedores no que se trata sobre a organização pessoal e empresarial.</p>
+                </div>
+
+                <h1>Valores</h1>
+                <div className="texto-topicos">
+                    <p>1. Transparência com o cliente</p>
+                    <p>2. Entrega ágil de projetos</p>
+                    <p>3. Acessibilidade e inclusão individuais</p>
+                    <p>4. Acessibilidade de preços</p>
+                    <p>5. Contribuição ao código aberto</p>
                 </div>
             </>
             :
@@ -124,7 +143,7 @@ export function Conteudo({tema, nome_da_pagina }:ConteudoProps){
             nome_da_pagina === 'contato'?
             <>
                 <h1>Como você prefere falar com a gente?</h1>
-                <div id="texto">
+                <div className="texto">
                     <p>
                         Sinta-se à vontade para conversar conosco pelo canal que te deixar mais confortável. Atenderemos a sua solicitação ou dúvida o mais rápido que pudermos para oferecermos a melhor experiência para você.
                     </p>

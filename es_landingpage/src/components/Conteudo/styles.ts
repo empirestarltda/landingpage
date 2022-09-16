@@ -27,7 +27,7 @@ export const Container = styled.section<ConteudoProps> `
             font-size: 1.5rem;
         }
     }
-    #texto{
+    .texto{
         display: flex;
         width: 60%;
         flex-direction: column;
@@ -39,6 +39,23 @@ export const Container = styled.section<ConteudoProps> `
             text-indent: 2.5rem;
             @media (max-width: 820px) {
                 
+                font-size: 1.2rem;
+            }
+        }
+        @media (max-width: 820px) {
+            width: fit-content;
+            margin: 0 2rem 1rem 2rem;
+        }
+    }
+    .texto-topicos{
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+        text-align: start;
+        margin-bottom: 5rem;
+        p{
+            font-size: 1.75rem;
+            @media (max-width: 820px) {
                 font-size: 1.2rem;
             }
         }
